@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* -----------------------------------------------
+        login page Style
+        Name  : Misbahul Fahmi Fahrezi
+        Youtube : Go For Edu
+        Date    : 30 Oktober 2020
+        ----------------------------------------------- */
+
+        .inputtext {
+            width: 100%;
+            vertical-align: middle;
+            margin: 5px 10px 5px 0;
+            padding: 10px;
+            background-color: #FBFBFB;
+            border: 2px solid #000;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+
+        .tombol {
+            width: 100%;
+            vertical-align: middle;
+            margin: 5px 10px 5px 0;
+            padding: 10px;
+            background-color: #E9762B;
+            border: 2px solid #000;
+            border-radius: 20px;
+            box-sizing: border-box;
+            text-transform: uppercase;
+        }
+
+        div {
+            font-family: arial;
+            font-weight: bold;
+        }
+
+        #timer {
+            color: #D91656;
+        }
+
+        body {
+            overflow-y: hidden; /* Hide vertical scrollbar */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="div1">
+            <form name="myform" method="post">
+                <input type="text" name="uname" class="inputtext" autocomplete="off" placeholder="Username" required>
+                <br>
+                <input type="password" name="pass" class="inputtext" autocomplete="off" placeholder="Password" required>
+                <br>
+                <div id="timer"></div>
+                <br>
+                <input type="button" class="tombol" name="log" id="logbutton" value="Log in" onclick="myfunction()">
+                <br><br>
+            </form>
+        </div>
+    </center>
+
+    <script type="text/javascript">
+        function myfunction() {
+            var un = document.forms["myform"]["uname"].value;
+            var pw = document.forms["myform"]["pass"].value;
+            if (un === "Taripin" && pw === "55407") {
+                // Redirect to the specified URL in the same tab
+                window.location.href = 'https://sites.google.com/view/resorjembatan14rangkasbitung/menu-laporan';
+            } else {
+                document.getElementById("timer").innerHTML = "Salah password";
+            }
+        }
+    </script>
+</body>
+</html>
